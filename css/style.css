@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "kinuta-reiwa-kana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #ace3ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#weather{
+    margin: 0 0 0 150px;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(252, 252, 252);
+    font-size: 19px;
+    line-height: 23px;
+    margin-top: 3px;
+    background: #83adc2;
+    border-radius: 15px;
+    padding: 4px 40px;
+    border: 3px solid #a4d9f4;
+}
+.darkModeSwitch{
+    padding-right: 200px;
+}
+.darkModeSwitch p{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #e2f5ff;
+    letter-spacing: -1.3px;
+    margin-bottom: 2px;
+}
+#toggle-mode{
+    border: none;
+    width: 57px;
+    height: 31px;
+    background-color: #83adc2;
+    border-radius: 30px;
+    position: relative;
+    transition: background-color .2s ease-in-out;
+    border: 1px solid #a4d9f4;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#toggle-mode.active {
+    background-color: #a5a2ff;
+}
+#toggle-switch {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    margin: auto;
+    transition: left .3s ease-in-out;
+}
+#toggle-switch.active {
+    left: 26px;
+}
+
+main{
+    width: 100%;
+    background-color: #ECECEC;
+    /* background-color: #272727; */
+    display: flex;
+    justify-content: center;
+}
+.dark-mode main{
+    background-color: #272727;
+}
+.mainArea{
+    width: 100%;
+    margin-top: 120px;
+}
+.sec1{
+    /* width: 1070px; 3ボタン用 */
+    width: 690px; /* 2ボタン用 */
+    height: 70px;
+    gap: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #D1D1D1;
+    border-radius: 27px;
+    /* margin-bottom: 100px; */
+    list-style: none;
+}
+.dark-mode .sec1{
+    background-color: #313131;
+}
+.taskTab{
+    letter-spacing: 0.6em;
+    cursor: pointer;
+}
+.completeTab{
+    cursor: pointer;
+}
+.sec1 div{
+    width: 310px;
+    height: 70px;
+    /* background-color: #a5a2ff; */
+    border: none;
+    border-radius: 27px;
+    font-size: 14px;
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(57, 57, 57);
+    background-color: #C7C6D3;
+    flex-grow: 1;
+}
+.dark-mode .sec1 div{
+    background-color: #524f74;
+}
+.sec1 div p{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1 div.active {
+    color: rgb(57, 57, 57);
+    background-color: #a5a2ff;
+}
+.sec2{
+    display: none;
+    width: 800px;
+    margin: 0 auto;
+}
+form{
+    text-align: center;
+    margin-top: 100px;
+}
+#typing{
+    width: calc(770px - 40px);
+    height: 70px;
+    border-radius: 14px;
+    border: none;
+    padding: 0 40px;
+    font-size: 22px;
+    /* font-family: "kinuta-reiwa-kana", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    /* text-overflow: ellipsis; */
+}
+#submitList{
+    overflow: auto;
+    width: 840px;
+    height: 100vh;
+}
+#submitList li{
+    cursor: pointer;
+}
+.sec2.active {
+    display: block;
+}
+.clearBtnArea{
+    display: flex;
+    justify-content: center;
+    margin: 45px 0 20px;
+}
+#clearBtn{
+    width: 190px;
+    height: 35px;
+    background-color: #C7C6D3;
+    color: rgb(57, 57, 57);
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+#clearBtn:hover{
+    background-color: #a5a2ff;
+    color: white;
+}
+.completeArea{
+    height: 100vh;
+}
+#complete{
+    overflow: auto;
+    width: 840px;
+    height: 100vh;
+}
+#complete li{
+    cursor: not-allowed;
+}
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: #a5a2ff;
+}

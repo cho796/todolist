@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoリスト</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'xyo0uig',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+<body>
+    <header>
+        <div id="weather"></div>
+        <div class="darkModeSwitch">
+            <p>ダークモード</p>
+            <div id="toggle-mode">
+                <div id="toggle-switch"></div>
+            </div>           
+        </div>
+    </header>
+    <main>
+        <div class="mainArea">
+            <div class="sec1">
+                <div class="taskTab active">
+                    <p>タスク</p>
+                </div>
+                <div class="completeTab">
+                    <p>完成済み</p>
+                </div>
+            </div>
+
+            <!-- タスク -->
+            <div class="sec2 active">
+                <form id="form">
+                    <input type="text" id="typing">
+                </form>
+                <ul id="submitList">
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+
+            <!-- 完成済み -->
+            <div class="sec2">
+                <div class="clearBtnArea">
+                    <button id="clearBtn">完成済みを消去する</button>
+                </div>
+                <div class="completeArea">
+                    <ul id="complete">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
